@@ -1,4 +1,9 @@
 class Pin < ApplicationRecord
-  belongs_to user
+  validates :url, presence: true
 
+
+
+
+  belongs_to :user
+  has_many :comments
 end
